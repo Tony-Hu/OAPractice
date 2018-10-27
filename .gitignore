@@ -11,7 +11,5 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 desktop.ini
-.gitignore
 .idea/
 OAPractice.iml
-pom.xml
