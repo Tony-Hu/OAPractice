@@ -3,6 +3,7 @@ package twilio;
 import java.util.LinkedList;
 import java.util.List;
 
+//Time complexity - O(n), space complexity - O(1)
 public class MissingWords {
   public List<String> missingWords(String s, String t) {
     List<String> result = new LinkedList<>();
@@ -18,6 +19,9 @@ public class MissingWords {
       char cs = s.charAt(i);
       char ct = t.charAt(j);
       if (cs == ' ') {
+        if (cs != ct) {
+          isMissing = true;
+        }
         if (isMissing) {
           result.add(sb.toString());
           j = oldJ;//turn back

@@ -24,5 +24,9 @@ public class MissingWordsTest {
     String s4 = "I am using HackerRank to improve programming";
     String t4 = "am HackerRank to improve";
     assertArrayEquals(new String[] {"I", "using", "programming"}, missingWords.missingWords(s4, t4).toArray(new String[0]));
+
+    String s5 = "a aa aaa aa";
+    String t5 = "aaa aa";
+    assertArrayEquals(new String[] {"a", "aa"}, missingWords.missingWords(s5, t5).toArray(new String[0]));
   }
 }
