@@ -12,8 +12,8 @@ import java.util.Scanner;
 public class Hosts {
   public void processFile(String fileName) {
     Map<String, Integer> map = new HashMap<>();
-    try (Scanner scanner = new Scanner(new File(fileName))) {
 
+    try (Scanner scanner = new Scanner(new File(fileName))) {
       while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
         int endIndex = line.indexOf(' ');
@@ -23,7 +23,7 @@ public class Hosts {
     } catch (FileNotFoundException e) {
       System.err.println("File not found!");
     }
-    
+
     try (PrintStream printStream = new PrintStream(new FileOutputStream("records_" + fileName))) {
       for (Map.Entry<String, Integer> entry : map.entrySet()) {
         printStream.println(entry.getKey() + " " + entry.getValue());

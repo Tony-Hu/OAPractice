@@ -43,15 +43,8 @@ public class ReformattingDates {
   }
 
   private String convertDay(String day) {
-    int result = 0;
-    for (int i = 0; i < day.length(); i++) {
-      char c = day.charAt(i);
-      if (!Character.isDigit(c)) {
-        break;
-      }
-      result = result * 10 + c - '0';
-    }
-    if (result < 10) {
+    String result = day.substring(0, day.length() - 2);
+    if (result.length() < 2) {
       return "0" + result;
     } else {
       return String.valueOf(result);

@@ -44,6 +44,7 @@ public class MissingWords {
         j++;
       }
     }
+
     while (i < s.length()) {
       char cs = s.charAt(i);
       if (cs == ' ') {
